@@ -1,0 +1,132 @@
+:root {
+  --bg: #0b1220;
+  --card: #0f172a;
+  --card2: #111c33;
+  --text: #e6eef8;
+  --muted: #9aa7bd;
+  --border: rgba(255, 255, 255, 0.09);
+
+  --primary: #3b82f6;
+  --danger: #ef4444;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Apple SD Gothic Neo,
+    "Malgun Gothic", "맑은 고딕", sans-serif;
+  background: radial-gradient(1200px 800px at 20% 10%, #132248 0%, var(--bg) 55%);
+  color: var(--text);
+}
+
+.container {
+  max-width: 980px;
+  margin: 28px auto;
+  padding: 0 16px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.h1 {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+}
+
+.sub {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.card {
+  background: linear-gradient(180deg, var(--card) 0%, var(--card2) 100%);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.25);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn.primary {
+  background: rgba(59,130,246,0.22);
+  border-color: rgba(59,130,246,0.35);
+}
+
+.btn.danger {
+  background: rgba(239,68,68,0.18);
+  border-color: rgba(239,68,68,0.35);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.04);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.badge {
+  font-weight: 800;
+  color: var(--text);
+}
+
+.hr {
+  height: 1px;
+  background: var(--border);
+  margin: 12px 0;
+}
+
+label {
+  user-select: none;
+}
+
+input[type="checkbox"] {
+  transform: translateY(1px);
+}
+
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: rgba(0,0,0,0.28);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+  margin: 0;
+  max-height: 360px;
+  overflow: auto;
+  font-size: 12.5px;
+  line-height: 1.45;
+}
